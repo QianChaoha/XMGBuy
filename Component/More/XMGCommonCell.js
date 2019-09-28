@@ -22,7 +22,8 @@ var CommonCell = React.createClass({
        return{
            title: '',  // 标题
            isSwitch: false, // 是否展示开关
-           rightTitle: ''
+           rightTitle: '',
+           click:function (){}
        }
     },
 
@@ -34,7 +35,7 @@ var CommonCell = React.createClass({
 
     render() {
         return (
-          <TouchableOpacity onPress={()=>{alert('点了')}}>
+          <TouchableOpacity onPress={this.props.click}>
             <View style={styles.container}>
                 {/*左边*/}
                 <Text style={{marginLeft:8}}>{this.props.title}</Text>

@@ -27,30 +27,33 @@ var More = React.createClass({
                 {this.renderNavBar()}
 
                 <ScrollView>
-                   <View style={{marginTop:20}}>
-                       <CommonCell
-                          title="扫一扫"
-                       />
-                   </View>
+                    <View style={{ marginTop: 20 }}>
+                        <CommonCell
+                            title="扫一扫"
+                            click={() => {
+                                alert('haha')
+                            }}
+                        />
+                    </View>
 
-                   <View style={{marginTop:20}}>
+                    <View style={{ marginTop: 20 }}>
                         <CommonCell
                             title="省流量模式"
                             isSwitch={true}
                         />
                         <CommonCell
-                           title="消息提醒"
+                            title="消息提醒"
                         />
                         <CommonCell
-                           title="邀请好友使用码团"
+                            title="邀请好友使用码团"
                         />
                         <CommonCell
-                           title="清空缓存"
-                           rightTitle="1.99M"
+                            title="清空缓存"
+                            rightTitle="1.99M"
                         />
-                   </View>
+                    </View>
 
-                    <View style={{marginTop:20}}>
+                    <View style={{ marginTop: 20 }}>
                         <CommonCell
                             title="问卷调查"
                         />
@@ -68,7 +71,7 @@ var More = React.createClass({
                         />
                     </View>
 
-                    <View style={{marginTop:20}}>
+                    <View style={{ marginTop: 20 }}>
                         <CommonCell
                             title="精品应用"
                         />
@@ -79,13 +82,18 @@ var More = React.createClass({
     },
 
     // 导航条
-    renderNavBar(){
-        return(
+    renderNavBar() {
+        return (
             <View style={styles.navOutViewStyle}>
-                <Text style={{color:'white', fontSize:16, fontWeight:'bold'}}>更多</Text>
-                <TouchableOpacity onPress={()=>{alert('点了!')}} style={styles.rightViewStyle}>
-                   <Image source={{uri: 'icon_mine_setting'}} style={styles.navImageStyle}/>
-                </TouchableOpacity>
+                <Text style={{ color: 'white', fontSize: 16, fontWeight: 'bold' }}>更多</Text>
+                <View style={styles.rightViewStyle}>
+
+                    <TouchableOpacity onPress={() => { alert('点了!') }} >
+                        <Image source={{ uri: 'icon_mine_setting' }} style={styles.navImageStyle} />
+                    </TouchableOpacity>
+
+                </View>
+
             </View>
         )
     }
@@ -94,28 +102,34 @@ var More = React.createClass({
 
 const styles = StyleSheet.create({
 
-    navImageStyle:{
-        width:Platform.OS == 'ios' ? 28: 24,
-        height:Platform.OS == 'ios' ? 28: 24,
+    navImageStyle: {
+        width: Platform.OS == 'ios' ? 28 : 24,
+        height: Platform.OS == 'ios' ? 28 : 24,
     },
 
-    rightViewStyle:{
-        // 绝对定位
+    rightViewStyle: {
         position:'absolute',
         right:10,
-        bottom:Platform.OS == 'ios' ? 15:13
+        flex: 1,
+        backgroundColor:'yellow',
+        left:0,
+        right:0,
+        top:0,
+        bottom:0,
+        flexDirection: 'row-reverse',
+        alignItems:'center'
     },
 
-    navOutViewStyle:{
+    navOutViewStyle: {
         height: Platform.OS == 'ios' ? 64 : 44,
-        backgroundColor:'rgba(255,96,0,1.0)',
+        backgroundColor: 'rgba(255,96,0,1.0)',
 
         // 设置主轴的方向
-        flexDirection:'row',
+        flexDirection: 'row',
         // 垂直居中 ---> 设置侧轴的对齐方式
-        alignItems:'center',
+        alignItems: 'center',
         // 主轴方向居中
-        justifyContent:'center'
+        justifyContent: 'center'
     },
 
     container: {
