@@ -26,7 +26,6 @@ var Shop = require('../Shop/XMGShop');
 var Mine = require('../Mine/XMGMine');
 var More = require('../More/XMGMore');
 
-
 var Main = React.createClass({
 
     // 初始化函数(变量是可以改变的,充当状态机的角色)
