@@ -111,13 +111,13 @@ const styles = StyleSheet.create({
         position:'absolute',
         right:10,
         flex: 1,
-        backgroundColor:'yellow',
         left:0,
-        right:0,
+        right:10,
         top:0,
         bottom:0,
         flexDirection: 'row-reverse',
-        alignItems:'center'
+        alignItems:'center',
+       
     },
 
     navOutViewStyle: {

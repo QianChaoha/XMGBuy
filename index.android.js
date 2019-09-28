@@ -8,10 +8,10 @@ import {
   AppRegistry,
   StyleSheet,
   Text,
-  View,
-  Navigator
+  View
 } from 'react-native';
-import LaunchImage from './Component/Main/XMGLaunchImage'
+import LaunchImage from './Component/Main/XMGLaunchImage';
+import {Navigator} from 'react-native-deprecated-custom-components';
 /**-------导入外部的组件类---------**/
 class XMGBuy extends Component {
     render() {

@@ -13,14 +13,13 @@ import {
     Text,
     View,
     Image,
-    Platform,   // 判断当前运行的系统
-    Navigator
+    Platform   // 判断当前运行的系统
 } from 'react-native';
 
 
 /**-----导入外部的组件类------**/
 import TabNavigator from 'react-native-tab-navigator';
-
+import {Navigator} from 'react-native-deprecated-custom-components';
 var Home = require('../Home/XMGHome');
 var Shop = require('../Shop/XMGShop');
 var Mine = require('../Mine/XMGMine');
