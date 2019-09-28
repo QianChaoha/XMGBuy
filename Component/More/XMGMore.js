@@ -86,13 +86,10 @@ var More = React.createClass({
         return (
             <View style={styles.navOutViewStyle}>
                 <Text style={{ color: 'white', fontSize: 16, fontWeight: 'bold' }}>更多</Text>
-                <View style={styles.rightViewStyle}>
 
-                    <TouchableOpacity onPress={() => { alert('点了!') }} >
-                        <Image source={{ uri: 'icon_mine_setting' }} style={styles.navImageStyle} />
-                    </TouchableOpacity>
-
-                </View>
+                <TouchableOpacity onPress={() => { alert('点了!') }} style={styles.rightViewStyle}>
+                    <Image source={{ uri: 'icon_mine_setting' }} style={styles.navImageStyle} />
+                </TouchableOpacity>
 
             </View>
         )
@@ -108,16 +105,8 @@ const styles = StyleSheet.create({
     },
 
     rightViewStyle: {
-        position:'absolute',
-        right:10,
-        flex: 1,
-        left:0,
-        right:10,
-        top:0,
-        bottom:0,
-        flexDirection: 'row-reverse',
-        alignItems:'center',
-       
+        position: 'absolute',
+        right: 10,
     },
 
     navOutViewStyle: {

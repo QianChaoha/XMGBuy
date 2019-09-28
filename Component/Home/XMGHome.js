@@ -103,7 +103,7 @@ const styles = StyleSheet.create({
 
     topInputStyle:{ // 设置输入框
         width:width * 0.71,
-        height:Platform.OS == 'ios' ? 35 : 38,
+        height:Platform.OS == 'ios' ? 35 : 30,
         backgroundColor:'white',
         marginTop: Platform.OS == 'ios' ? 18 : 0,
 
@@ -113,6 +113,8 @@ const styles = StyleSheet.create({
         // 内左边距
         paddingLeft:10,
         paddingRight: 10,
+        //去除下划线
+        underlineColorAndroid='transparent'
     },
 
     navRightImgStyle:{ // 设置图片的大小
